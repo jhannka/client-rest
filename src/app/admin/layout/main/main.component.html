@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+
+<mat-drawer-container autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" [(opened)]="opened">
+    <app-sidebar (onToggleSideNav)="onToggleSideNav($event)">
+    </app-sidebar>
+  </mat-drawer>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

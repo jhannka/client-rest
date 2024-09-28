@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="container row mt-4">
+    <div class="col col-12">
+      <h3>{{ title }} Area</h3>
+      <hr class="w-100">
+    </div>
+  </div>
+  <div class="container">
+    <form [formGroup]="formData">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <mat-form-field class="full-width" appearance="outline" floatLabel="always">
+            <mat-label>Codigo</mat-label>
+            <input matInput type="number" formControlName="code">
+            <mat-error *ngIf="formData.get('department')?.hasError('required')">El campo es obligatorio</mat-error>
+            <mat-error *ngIf="formData.get('department')?.hasError('pattern')">Solo se permiten números</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <mat-form-field class="full-width" appearance="outline" floatLabel="always">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="names">
+            <mat-error *ngIf="formData.get('last_name')?.hasError('required')">El campo es obligatorio</mat-error>
+            <mat-error *ngIf="formData.get('last_name')?.hasError('minlength')">Mínimo 2 caracteres</mat-error>
+            <mat-error *ngIf="formData.get('last_name')?.hasError('maxlength')">Máximo 50 caracteres</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <mat-form-field class="full-width" appearance="outline" floatLabel="always">
+            <mat-label>lider</mat-label>
+            <input matInput type="number" formControlName="lead">
+            <mat-error *ngIf="formData.get('department')?.hasError('required')">El campo es obligatorio</mat-error>
+            <mat-error *ngIf="formData.get('department')?.hasError('pattern')">Solo se permiten números</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+    <div class="row mb-4">
+      <div class="col col-6">
+        <button mat-raised-button class="w-100" (click)="onCancel(false)">Cancelar</button>
+      </div>
+      <div class="col col-6">
+        <button mat-raised-button color="primary" class="w-100" [disabled]="!isFormValid" (click)="onSave()">Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,15 @@
+.sidenav {
+  border-right: 0px;
+  -webkit-box-shadow: -30px 0px 45px -30px rgb(0 0 0);
+  -moz-box-shadow: 3px 0px 45px -30px rgba(0, 0, 0, 1);
+  box-shadow: -10px 0px 45px -30px rgb(0 0 0);
+}
+
+.content {
+  height: calc(100vh - 50px);
+  padding: 1em;
+}
+
+.mat-drawer-container, mat-drawer {
+  background-color: #f2f2f2;
+}

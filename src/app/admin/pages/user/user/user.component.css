@@ -1,0 +1,10 @@
+ag-grid-angular {
+  width: 100%;
+  height: calc(100vh - (50px + 75px));
+}
+
+.ms-3 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}

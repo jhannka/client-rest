@@ -1,0 +1,11 @@
+<div *ngIf="rol === 'admin'" class="container">
+  <h1>Bienvenido a la Plataforma de Gestión de Usuarios</h1>
+  <p>¡Gestiona fácilmente los usuarios de tu aplicación!</p>
+  <button mat-raised-button color="primary" routerLink="/admin/user">Ir a usuarios</button>
+</div>
+
+<div *ngIf="rol !== 'admin'" class="container">
+  <h1>Bienvenido a la Plataforma </h1>
+  <p>¡Gestiona fácilmente tus generos musicales!</p>
+  <button mat-raised-button color="primary" routerLink="/admin/category/category">Ir a generos</button>
+</div>

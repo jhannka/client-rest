@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidebarView()">
+    <mat-icon matTooltip="{{viewSidebar ? 'Cerrar' : 'Abrir'}} menu">menu</mat-icon>
+  </button>
+  <span class="ml-2">
+    <img [src]="'assets/images/faces/face4.jpg'" matTooltip="Perfil" class="rounded-circle float-left">
+        <p>
+      {{ user?.names | uppercase }} <br>
+          <i>{{ user?.email }}</i> <br>
+      <i>{{ user?.identification_card }}</i>
+    </p>
+  </span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button matTooltip="Salir" (click)="logout()">
+    <mat-icon>power_settings_new</mat-icon>
+  </button>
+</mat-toolbar>
